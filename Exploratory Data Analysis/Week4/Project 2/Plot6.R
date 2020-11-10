@@ -41,7 +41,7 @@ dFd$fips <- str_replace_all(dFd$fips, "6037", "Los Angeles")
 
 png(filename="Plot6.png")
 p <- ggplot(dFd, aes(x = year, y = Emissions, color = fips)) + geom_line(lwd = 2) + geom_point(size = 3)
-p + ylab("Emissions (tons)") + ggtitle("PM2.5 Emission by vehicles sources in Baltimore and Los Angeles")
+print(p + ylab("Emissions (tons)") + ggtitle("PM2.5 Emission by vehicles sources in Baltimore and Los Angeles"))
 dev.off()
 
 

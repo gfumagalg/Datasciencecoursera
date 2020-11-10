@@ -27,5 +27,5 @@ names(dFt2) <- c("type","year","Emissions")
 # Plot the data from all types of sources
 png(filename = "Plot3.png")
 p <- ggplot(dFt2, aes(x = year, y = Emissions, color = type)) + geom_line(lwd = 2) + geom_point(size = 3)
-p + ylab("Emissions (tons)") + ggtitle("PM2.5 Emission per type in Baltimore")
+print(p + ylab("Emissions (tons)") + ggtitle("PM2.5 Emission per type in Baltimore"))
 dev.off()
